@@ -1,0 +1,13 @@
+candidate_id,job_id,job_position_name,matched_score
+candidate_01,job_01,Senior Software Engineer,0.683333333
+candidate_02,job_01,Senior Software Engineer,0.85
+candidate_03,job_01,Senior Software Engineer,0.816666667
+candidate_04,job_02,HR Officer,0.683333333
+candidate_05,job_02,HR Officer,0.65
+candidate_06,job_02,HR Officer,0.716666667
+candidate_07,job_03,Civil Engineer,0.54
+candidate_08,job_03,Civil Engineer,0.3499999999999999
+candidate_09,job_03,Civil Engineer,0.25
+candidate_10,job_04,Business Development Executive,0.683333333
+candidate_11,job_04,Business Development Executive,0.416666667
+candidate_12,job_04,Business Development Executive,0.5433333333333333
