@@ -1,0 +1,62 @@
+TF-IDF Vectorization Summary
+========================================
+Candidates: 12
+Jobs: 4
+Vocabulary: 955
+
+Vectorization settings:
+  min_df = 1
+  max_df = 0.95
+  ngram_range = (1, 2)
+  sublinear_tf = True
+
+Candidate matrix shape: (12, 955)
+Job matrix shape: (4, 955)
+
+job_01 - top terms:
+    software                  0.157
+    monitoring                0.154
+    year technical            0.154
+    field visit               0.154
+    industry                  0.154
+    sc computer               0.154
+    industry trend            0.154
+    science engineering       0.154
+    mentorship industry       0.154
+    software engineer         0.154
+
+job_02 - top terms:
+    resource management       0.206
+    hr                        0.206
+    management                0.189
+    resource                  0.18
+    policy                    0.18
+    human resource            0.18
+    bba                       0.18
+    human                     0.18
+    development               0.146
+    relationship building     0.122
+
+job_03 - top terms:
+    review                    0.219
+    civil                     0.219
+    review progress           0.129
+    utilization supervision   0.129
+    utilization               0.129
+    year autocad              0.129
+    feasibility               0.129
+    feasibility analysis      0.129
+    sc civil                  0.129
+    supervision technical     0.129
+
+job_04 - top terms:
+    sourcing                  0.255
+    partner                   0.151
+    quality garment           0.151
+    year fast                 0.151
+    vendor communication      0.151
+    vendor                    0.151
+    sourcing quality          0.151
+    quality                   0.151
+    skill ieltsinternet       0.151
+    online work               0.151

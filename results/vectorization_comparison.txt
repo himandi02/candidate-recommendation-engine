@@ -1,0 +1,46 @@
+Vectorization Method Comparison
+========================================
+
+This compares vector CHARACTERISTICS only:
+- dimensionality
+- representation type
+- sparsity/density
+- example vector values
+
+Similarity scoring and candidate ranking are NOT performed
+by this script. Those operations are handled by the
+Similarity Computation & Recommendation component.
+
+Method: TF-IDF
+  Candidates: 12
+  Jobs: 4
+  Vector dimensions: 955
+  Representation: sparse
+  Density (non-zero fraction): 0.080
+  Example - first 8 values of the first candidate vector:
+    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+Method: Word2Vec
+  Candidates: 12
+  Jobs: 4
+  Vector dimensions: 100
+  Representation: dense
+  Density (non-zero fraction): 1.000
+  Example - first 8 values of the first candidate vector:
+    [-0.0820000022649765, 0.13600000739097595, 0.3019999861717224, -0.003000000026077032, -0.0689999982714653, 0.24799999594688416, 0.2709999978542328, -0.08500000089406967]
+
+Discussion (for the report):
+
+- TF-IDF represents each document as a sparse vector over the shared vocabulary, weighted by term frequency and inverse document frequency.
+
+- TF-IDF is simple and interpretable because the features correspond directly to words and n-grams in the corpus.
+
+- TF-IDF can work well on a small corpus because it does not need to learn word relationships from a large training dataset.
+
+- Word2Vec represents each document as a dense vector by averaging the learned word embeddings.
+
+- Word2Vec can capture semantic relationships between words, but the current project has only 12 CVs and 4 job descriptions. Therefore, the Word2Vec model is trained on a very small corpus.
+
+- Because of the small corpus, Word2Vec should be treated as a comparison method rather than necessarily the primary representation for the recommendation system.
+
+- Sentence-BERT, if included, uses a pretrained language model and therefore benefits from knowledge learned from large external datasets. However, it requires additional model setup and resources.
