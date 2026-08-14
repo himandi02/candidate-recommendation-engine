@@ -30,7 +30,7 @@ The main objective is to assist recruiters in identifying top-fit talent efficie
 
 ## Folder Structure
 
-````text
+```text
 candidate-recommendation-engine/
 │
 ├── data/       # Raw CV text files and job descriptions
@@ -38,6 +38,7 @@ candidate-recommendation-engine/
 ├── src/        # Python source code (cleaning, vectorization, similarity)
 ├── results/    # Generated candidate rankings and evaluation metrics
 └── docs/       # Project report, presentation slides, and README
+```
 
 ## Setup and Installation
 
@@ -46,7 +47,7 @@ candidate-recommendation-engine/
 ```bash
 git clone <repository-url>
 cd candidate-recommendation-engine
-````
+```
 
 ### 2. Create a Virtual Environment
 
@@ -79,7 +80,7 @@ Then activate the virtual environment:
 Install the required Python libraries:
 
 ```powershell
-python -m pip install numpy pandas scikit-learn nltk spacy
+python -m pip install numpy pandas scikit-learn nltk spacy joblib gensim
 ```
 
 ### 5. Verify the Installation
@@ -87,13 +88,13 @@ python -m pip install numpy pandas scikit-learn nltk spacy
 Run the following command:
 
 ```powershell
-python -c "import numpy, pandas, sklearn, nltk, spacy; print('Core packages imported successfully')"
+python -c "import numpy, pandas, sklearn, nltk, spacy, joblib, gensim; print('All required packages imported successfully')"
 ```
 
 If the installation is successful, you should see:
 
 ```text
-Core packages imported successfully
+All required packages imported successfully
 ```
 
 ### 6. Run the Project
