@@ -1,0 +1,36 @@
+
+============================================================
+JOB: job_01
+============================================================
+Rank 1: candidate_05 - Score: 0.0522
+Rank 2: candidate_03 - Score: 0.0441
+Rank 3: candidate_07 - Score: 0.0316
+Rank 4: candidate_11 - Score: 0.0274
+Rank 5: candidate_01 - Score: 0.0258
+
+============================================================
+JOB: job_02
+============================================================
+Rank 1: candidate_08 - Score: 0.066
+Rank 2: candidate_12 - Score: 0.0487
+Rank 3: candidate_07 - Score: 0.0407
+Rank 4: candidate_10 - Score: 0.0264
+Rank 5: candidate_11 - Score: 0.023
+
+============================================================
+JOB: job_03
+============================================================
+Rank 1: candidate_06 - Score: 0.0543
+Rank 2: candidate_07 - Score: 0.0399
+Rank 3: candidate_03 - Score: 0.0316
+Rank 4: candidate_05 - Score: 0.0243
+Rank 5: candidate_02 - Score: 0.0226
+
+============================================================
+JOB: job_04
+============================================================
+Rank 1: candidate_08 - Score: 0.0658
+Rank 2: candidate_11 - Score: 0.0246
+Rank 3: candidate_10 - Score: 0.0153
+Rank 4: candidate_01 - Score: 0.0118
+Rank 5: candidate_04 - Score: 0.0094
