@@ -1,0 +1,47 @@
+Feature Engineering Analysis
+========================================
+Corpus size: 16 documents
+
+Comparing TF-IDF configuration choices and their effect on
+the resulting feature space.
+
+Config: unigrams only, no limits
+  Settings: {'ngram_range': (1, 1), 'min_df': 1, 'max_df': 1.0}
+  Vocabulary size (feature dimensions): 371
+  Matrix density: 0.089
+
+Config: unigrams + bigrams (chosen final config)
+  Settings: {'ngram_range': (1, 2), 'min_df': 1, 'max_df': 0.95, 'sublinear_tf': True}
+  Vocabulary size (feature dimensions): 955
+  Matrix density: 0.075
+  Example multi-word features: ['abaqus ansys', 'ability apparel', 'access excel', 'account management', 'account payable']
+
+Config: unigrams + bigrams + trigrams
+  Settings: {'ngram_range': (1, 3), 'min_df': 1, 'max_df': 0.95, 'sublinear_tf': True}
+  Vocabulary size (feature dimensions): 1571
+  Matrix density: 0.070
+  Example multi-word features: ['abaqus ansys', 'abaqus ansys optistruct', 'ability apparel', 'ability apparel sourcing', 'access excel']
+
+Config: stricter min_df=2 (drop words seen in only 1 document)
+  Settings: {'ngram_range': (1, 2), 'min_df': 2, 'max_df': 0.95, 'sublinear_tf': True}
+  Vocabulary size (feature dimensions): 117
+  Matrix density: 0.162
+  Example multi-word features: ['accountant accountant', 'accountant staff', 'bachelor science', 'business development', 'computer science']
+
+Config: capped vocabulary, max_features=200
+  Settings: {'ngram_range': (1, 2), 'min_df': 1, 'max_df': 0.95, 'max_features': 200, 'sublinear_tf': True}
+  Vocabulary size (feature dimensions): 200
+  Matrix density: 0.121
+  Example multi-word features: ['ability apparel', 'access excel', 'account management', 'account payable', 'account receivable']
+
+Decision (used in vectorize_tfidf.py):
+
+- ngram_range=(1, 2): unigrams alone can lose useful domain phrases such as 'machine learning'. Bigrams provide additional context without creating as many features as trigrams.
+
+- min_df=1: with only 16 documents, requiring a word to appear in 2 or more documents could remove candidate-specific skills that are useful for distinguishing candidates.
+
+- max_df=0.95: removes terms appearing in almost every document because these terms provide less discriminative information.
+
+- sublinear_tf=True: reduces the influence of very frequent repeated terms by using logarithmic term frequency scaling.
+
+- No max_features cap: the corpus is small, so limiting the vocabulary is unnecessary. The final TF-IDF configuration produces a manageable feature space.
