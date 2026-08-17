@@ -243,7 +243,8 @@ models/tfidf_job_vectors.pkl
 Then run:
 
 ```bash
-python candidate_recommendation.py
+python src/similarity_recommendation.py
+
 ```
 
 After execution, the generated results will be available in the `results/` folder.
