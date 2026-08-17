@@ -1,0 +1,49 @@
+Job ID,Job Title,Candidate ID,Relevant,Skills Match,Experience Match,Education Match,Reason
+job_01,Senior Software Engineer,candidate_01,0,Medium,Low,No,Machine learning skills are relevant but the internship is short and the degree is in metallurgy
+job_01,Senior Software Engineer,candidate_02,1,High,High,Yes,Direct software development experience with an information technology degree and relevant technologies
+job_01,Senior Software Engineer,candidate_03,1,High,High,Partial,Software engineering and SDLC experience are strong although the degree is in applied statistics and computation
+job_01,Senior Software Engineer,candidate_04,0,Low,Low,No,Biological science education and service roles do not match software engineering
+job_01,Senior Software Engineer,candidate_05,1,High,Medium,Yes,Computer science graduate with programming and web development experience
+job_01,Senior Software Engineer,candidate_06,0,Medium,Low,Partial,Engineering analysis software is relevant technically but there is no software development role
+job_01,Senior Software Engineer,candidate_07,0,Low,Low,No,Accounting skills and work experience do not match software engineering
+job_01,Senior Software Engineer,candidate_08,0,Low,Low,No,Sales and marketing experience does not provide the required software engineering background
+job_01,Senior Software Engineer,candidate_09,0,Medium,Low,Yes,CSE and Python are relevant but the candidate has only a short data focused internship
+job_01,Senior Software Engineer,candidate_10,0,Medium,Low,No,Analytics and machine learning skills are present but software engineering experience and education are missing
+job_01,Senior Software Engineer,candidate_11,0,High,Low,Partial,Web and machine learning skills are relevant but the candidate is a fresher with internship experience only
+job_01,Senior Software Engineer,candidate_12,0,Low,Low,No,The career and education are primarily in accounting rather than software engineering
+job_02,HR Officer,candidate_01,0,Low,Low,No,Data science skills and metallurgy education do not match human resource management
+job_02,HR Officer,candidate_02,0,Low,Low,No,Software development experience does not demonstrate HR management capability
+job_02,HR Officer,candidate_03,0,Medium,Low,No,Documentation and collaboration are transferable but the candidate lacks HR education and experience
+job_02,HR Officer,candidate_04,0,Medium,Low,No,Communication and safety experience are transferable but there is no HR background
+job_02,HR Officer,candidate_05,0,Medium,Medium,No,Teaching and time management are useful but the education and work history are in computer science
+job_02,HR Officer,candidate_06,0,Low,Low,No,Mechanical engineering skills and experience do not match HR responsibilities
+job_02,HR Officer,candidate_07,0,Medium,Medium,Partial,Policy and compliance work with a BBA is useful but the professional background is accounting rather than HR
+job_02,HR Officer,candidate_08,0,Medium,Medium,Partial,Interpersonal and account management skills are useful but there is no direct HR education or experience
+job_02,HR Officer,candidate_09,0,Low,Low,No,Data analytics education and internship experience do not match HR management
+job_02,HR Officer,candidate_10,0,Medium,Low,No,Business management knowledge is transferable but the education and work experience are statistical
+job_02,HR Officer,candidate_11,0,Low,Low,No,The candidate is a software and machine learning fresher without HR preparation
+job_02,HR Officer,candidate_12,1,High,High,Partial,Payroll personnel policy and human resource exposure provide strong transferable HR experience
+job_03,Civil Engineer,candidate_01,0,Low,Low,Partial,The engineering degree is in metallurgy and there are no civil design tools or civil experience
+job_03,Civil Engineer,candidate_02,0,Low,Low,No,Software development skills and information technology education do not match civil engineering
+job_03,Civil Engineer,candidate_03,0,Medium,Low,No,Documentation and technical support are transferable but civil engineering tools and education are absent
+job_03,Civil Engineer,candidate_04,0,Low,Low,No,Biological science and service experience do not match civil engineering
+job_03,Civil Engineer,candidate_05,0,Low,Low,No,Microsoft Office and technical support are insufficient without civil engineering education or design experience
+job_03,Civil Engineer,candidate_06,1,High,Medium,Partial,AutoCAD engineering design and analysis experience are strongly transferable although the specialization is mechanical
+job_03,Civil Engineer,candidate_07,0,Medium,Low,No,Reporting procurement and compliance are transferable but the candidate has no civil engineering background
+job_03,Civil Engineer,candidate_08,0,Medium,Medium,No,Project coordination is useful but the candidate lacks engineering education and civil design skills
+job_03,Civil Engineer,candidate_09,0,Low,Low,No,Computer science and data analytics experience do not match civil engineering requirements
+job_03,Civil Engineer,candidate_10,0,Low,Low,No,Statistical and business analysis do not provide civil engineering skills or experience
+job_03,Civil Engineer,candidate_11,0,Low,Low,No,Web and machine learning experience do not match civil engineering work
+job_03,Civil Engineer,candidate_12,0,Low,Low,No,Accounting and payroll experience do not match civil engineering requirements
+job_04,Business Development Executive,candidate_01,0,Low,Low,Yes,The candidate has a bachelor degree but lacks sales sourcing and vendor communication experience
+job_04,Business Development Executive,candidate_02,0,Medium,Low,Yes,Online technology skills are useful but the work history is software development rather than business development
+job_04,Business Development Executive,candidate_03,0,Medium,Low,Yes,Analysis and documentation are transferable but there is no sales sourcing or vendor experience
+job_04,Business Development Executive,candidate_04,0,Low,Low,Yes,The degree requirement is met but the service roles do not show business development capability
+job_04,Business Development Executive,candidate_05,0,Medium,Low,Yes,Web and communication skills are useful but there is no business development or sourcing experience
+job_04,Business Development Executive,candidate_06,0,Low,Low,Yes,The degree requirement is met but mechanical engineering experience is unrelated to business development
+job_04,Business Development Executive,candidate_07,0,Medium,Medium,Yes,Procurement and contract skills are transferable but the candidate lacks sales and apparel sourcing experience
+job_04,Business Development Executive,candidate_08,1,High,High,Partial,Direct business development sales account management and negotiation experience strongly match the role
+job_04,Business Development Executive,candidate_09,0,Low,Low,Yes,The candidate has a bachelor degree but the skills and experience are focused on data analytics
+job_04,Business Development Executive,candidate_10,1,Medium,Medium,Yes,Business management and business analysis provide a reasonable match despite limited sourcing experience
+job_04,Business Development Executive,candidate_11,0,Medium,Low,Yes,Web skills support online work but the candidate is a fresher without sales or sourcing experience
+job_04,Business Development Executive,candidate_12,1,Medium,High,Yes,Contracts customer support marketing and vendor invoice work provide transferable business experience
