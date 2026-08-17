@@ -49,7 +49,6 @@ project/
 │
 ├── candidate_recommendation.py
 │
-├── requirements.txt
 │
 └── README.md
 ```
