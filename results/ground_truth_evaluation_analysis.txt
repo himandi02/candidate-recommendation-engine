@@ -1,0 +1,73 @@
+Dataset Ground-Truth Evaluation
+===================================
+Status: FINAL
+
+Evaluation setup
+----------------
+Recommendation method: TF-IDF cosine similarity
+Observed ground-truth pairs: 12
+All ranked pairs: 48
+Unlisted pairs assumed non-relevant: 36
+Relevance threshold: matched_score >= 0.50
+Relevant pairs at threshold: 9
+Cutoffs: Top-3, Top-5
+
+Score agreement on the 12 observed pairs
+----------------------------------------
+Ground-truth mean: 0.5986
+Cosine-similarity mean: 0.0183
+MAE: 0.5803
+RMSE: 0.6052
+Pearson correlation: 0.3716
+Spearman correlation: 0.3099
+R squared: -10.8208
+
+Top-3 classification results
+------------------------------------
+job_01 (Senior Software Engineer): Accuracy=0.6667, Precision=0.3333, Recall=0.3333, F1=0.3333
+  Relevant recommended: candidate_03
+  Missed relevant: candidate_01;candidate_02
+job_02 (HR Officer): Accuracy=0.5000, Precision=0.0000, Recall=0.0000, F1=0.0000
+  Relevant recommended: None
+  Missed relevant: candidate_04;candidate_05;candidate_06
+job_03 (Civil Engineer): Accuracy=0.8333, Precision=0.3333, Recall=1.0000, F1=0.5000
+  Relevant recommended: candidate_07
+  Missed relevant: None
+job_04 (Business Development Executive): Accuracy=0.7500, Precision=0.3333, Recall=0.5000, F1=0.4000
+  Relevant recommended: candidate_10
+  Missed relevant: candidate_12
+
+Macro: Accuracy=0.6875, Precision=0.2500, Recall=0.4583, F1=0.3083
+Micro: Accuracy=0.6875, Precision=0.2500, Recall=0.3333, F1=0.2857
+
+Top-5 classification results
+------------------------------------
+job_01 (Senior Software Engineer): Accuracy=0.6667, Precision=0.4000, Recall=0.6667, F1=0.5000
+  Relevant recommended: candidate_01;candidate_03
+  Missed relevant: candidate_02
+job_02 (HR Officer): Accuracy=0.3333, Precision=0.0000, Recall=0.0000, F1=0.0000
+  Relevant recommended: None
+  Missed relevant: candidate_04;candidate_05;candidate_06
+job_03 (Civil Engineer): Accuracy=0.6667, Precision=0.2000, Recall=1.0000, F1=0.3333
+  Relevant recommended: candidate_07
+  Missed relevant: None
+job_04 (Business Development Executive): Accuracy=0.5833, Precision=0.2000, Recall=0.5000, F1=0.2857
+  Relevant recommended: candidate_10
+  Missed relevant: candidate_12
+
+Macro: Accuracy=0.5625, Precision=0.2000, Recall=0.5417, F1=0.2798
+Micro: Accuracy=0.5625, Precision=0.2000, Recall=0.4444, F1=0.2759
+
+Interpretation
+--------------
+Accuracy is influenced by the many non-relevant pairs and should not be interpreted without Precision Recall and F1.
+The cosine similarities are much lower than the dataset matched scores and have weak agreement with their ordering.
+The low agreement is consistent with sparse exact-term TF-IDF matching and limited overlap between CV and job text.
+
+Required assumptions and limitations
+------------------------------------
+- ground_truth.csv provides scores for only 12 of the 48 pairs.
+- The other 36 cross-job pairs are assumed non-relevant for the Top-K classification metrics because no matched score is given.
+- A 0.50 relevance threshold is used because the CSV contains continuous scores rather than binary labels.
+- MAE RMSE and correlation use only the 12 pairs with observed matched scores.
+- Cosine similarity is not calibrated to reproduce the dataset's matched-score scale so score error measures should be interpreted as agreement diagnostics rather than prediction error from a trained regression model.

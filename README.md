@@ -107,6 +107,28 @@ src/preprocessing.ipynb
 
 Run the notebook cells in order to preprocess the CVs and job descriptions and continue with the candidate recommendation pipeline.
 
+### 7. Evaluate the Recommendations
+
+After generating the similarity scores and rankings, run the dataset
+ground-truth evaluation required by the task:
+
+```powershell
+python src/evaluate_ground_truth.py
+```
+
+This compares the TF-IDF cosine scores with `data/ground_truth.csv` and
+calculates Accuracy, Precision, Recall, and F1 for Top-3 and Top-5. A
+`matched_score` threshold of `0.50` is used to derive binary relevance labels.
+
+Run the additional evaluation against the team-approved 48-pair answer key:
+
+```powershell
+python src/evaluate_recommendations.py
+```
+
+This produces the final per-job and overall Precision@3, Recall@3, F1@3,
+Precision@5, Recall@5, and F1@5 results.
+
 ## Tech Stack & Tools
 
 Language: Python

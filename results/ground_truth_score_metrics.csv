@@ -1,0 +1,2 @@
+Observed Pairs,Relevance Threshold,Relevant Observed Pairs,Ground Truth Mean,Cosine Similarity Mean,Mean Error,MAE,MSE,RMSE,Pearson Correlation,Spearman Correlation,R Squared
+12,0.5,9,0.5986,0.0183,-0.5803,0.5803,0.3662,0.6052,0.3716,0.3099,-10.8208

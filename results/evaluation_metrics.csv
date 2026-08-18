@@ -1,0 +1,9 @@
+Job ID,Job Title,K,Relevant Candidates,Recommended Candidates,True Positives,False Positives,False Negatives,Precision,Recall,F1 Score,Relevant Recommended IDs,Missed Relevant IDs
+job_01,Senior Software Engineer,3,3,3,2,1,1,0.6667,0.6667,0.6667,candidate_03;candidate_05,candidate_02
+job_01,Senior Software Engineer,5,3,5,2,3,1,0.4,0.6667,0.5,candidate_03;candidate_05,candidate_02
+job_02,HR Officer,3,1,3,1,2,0,0.3333,1.0,0.5,candidate_12,
+job_02,HR Officer,5,1,5,1,4,0,0.2,1.0,0.3333,candidate_12,
+job_03,Civil Engineer,3,1,3,1,2,0,0.3333,1.0,0.5,candidate_06,
+job_03,Civil Engineer,5,1,5,1,4,0,0.2,1.0,0.3333,candidate_06,
+job_04,Business Development Executive,3,3,3,2,1,1,0.6667,0.6667,0.6667,candidate_08;candidate_10,candidate_12
+job_04,Business Development Executive,5,3,5,2,3,1,0.4,0.6667,0.5,candidate_08;candidate_10,candidate_12

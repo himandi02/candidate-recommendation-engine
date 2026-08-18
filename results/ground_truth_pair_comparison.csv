@@ -1,0 +1,13 @@
+candidate_id,job_id,job_position_name,matched_score,cosine_similarity,Rank,relevant_at_threshold,score_error,absolute_error,squared_error
+candidate_01,job_01,Senior Software Engineer,0.6833,0.0258,5,1,-0.6575,0.6575,0.4323
+candidate_02,job_01,Senior Software Engineer,0.85,0.0257,6,1,-0.8243,0.8243,0.6795
+candidate_03,job_01,Senior Software Engineer,0.8167,0.0441,2,1,-0.7725,0.7725,0.5968
+candidate_04,job_02,HR Officer,0.6833,0.0076,8,1,-0.6757,0.6757,0.4566
+candidate_05,job_02,HR Officer,0.65,0.0135,6,1,-0.6365,0.6365,0.4052
+candidate_06,job_02,HR Officer,0.7167,0.0043,9,1,-0.7124,0.7124,0.5075
+candidate_07,job_03,Civil Engineer,0.54,0.0399,2,1,-0.5001,0.5001,0.2501
+candidate_08,job_03,Civil Engineer,0.35,0.007,9,0,-0.343,0.343,0.1176
+candidate_09,job_03,Civil Engineer,0.25,0.0065,10,0,-0.2435,0.2435,0.0593
+candidate_10,job_04,Business Development Executive,0.6833,0.0153,3,1,-0.668,0.668,0.4463
+candidate_11,job_04,Business Development Executive,0.4167,0.0246,2,0,-0.3921,0.3921,0.1537
+candidate_12,job_04,Business Development Executive,0.5433,0.0048,10,1,-0.5385,0.5385,0.29
