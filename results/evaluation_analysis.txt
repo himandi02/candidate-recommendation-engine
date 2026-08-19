@@ -1,0 +1,85 @@
+Candidate Recommendation Evaluation & Analysis
+====================================================
+Status: FINAL - answer key approved by the project team
+
+Evaluation setup
+----------------
+Recommendation method: TF-IDF cosine similarity
+Jobs: 4
+Candidates per job: 12
+Answer-key pairs: 48
+Relevant pairs: 8
+Cutoffs: Top-3, Top-5
+
+Relevant candidates by job:
+  job_01 (Senior Software Engineer): 3
+  job_02 (HR Officer): 1
+  job_03 (Civil Engineer): 1
+  job_04 (Business Development Executive): 3
+
+Metric definitions
+------------------
+Precision@K = relevant candidates in Top-K / K
+Recall@K = relevant candidates in Top-K / all relevant candidates
+F1@K = harmonic mean of Precision@K and Recall@K
+Macro average = equal weight for each job
+Micro average = aggregate TP/FP/FN across all jobs
+
+Top-3 results
+---------------
+job_01 (Senior Software Engineer): TP=2, FP=1, FN=1, Precision=0.6667, Recall=0.6667, F1=0.6667
+  Relevant recommended: candidate_03;candidate_05
+  Missed relevant: candidate_02
+job_02 (HR Officer): TP=1, FP=2, FN=0, Precision=0.3333, Recall=1.0000, F1=0.5000
+  Relevant recommended: candidate_12
+  Missed relevant: None
+job_03 (Civil Engineer): TP=1, FP=2, FN=0, Precision=0.3333, Recall=1.0000, F1=0.5000
+  Relevant recommended: candidate_06
+  Missed relevant: None
+job_04 (Business Development Executive): TP=2, FP=1, FN=1, Precision=0.6667, Recall=0.6667, F1=0.6667
+  Relevant recommended: candidate_08;candidate_10
+  Missed relevant: candidate_12
+
+Macro: Precision=0.5000, Recall=0.8333, F1=0.5833
+Micro: Precision=0.5000, Recall=0.7500, F1=0.6000
+
+Top-5 results
+---------------
+job_01 (Senior Software Engineer): TP=2, FP=3, FN=1, Precision=0.4000, Recall=0.6667, F1=0.5000
+  Relevant recommended: candidate_03;candidate_05
+  Missed relevant: candidate_02
+job_02 (HR Officer): TP=1, FP=4, FN=0, Precision=0.2000, Recall=1.0000, F1=0.3333
+  Relevant recommended: candidate_12
+  Missed relevant: None
+job_03 (Civil Engineer): TP=1, FP=4, FN=0, Precision=0.2000, Recall=1.0000, F1=0.3333
+  Relevant recommended: candidate_06
+  Missed relevant: None
+job_04 (Business Development Executive): TP=2, FP=3, FN=1, Precision=0.4000, Recall=0.6667, F1=0.5000
+  Relevant recommended: candidate_08;candidate_10
+  Missed relevant: candidate_12
+
+Macro: Precision=0.3000, Recall=0.8333, F1=0.4167
+Micro: Precision=0.3000, Recall=0.7500, F1=0.4286
+
+Relevant candidate ranks
+------------------------
+  job_01: candidate_05 (rank 1), candidate_03 (rank 2), candidate_02 (rank 6)
+  job_02: candidate_12 (rank 2)
+  job_03: candidate_06 (rank 1)
+  job_04: candidate_08 (rank 1), candidate_10 (rank 3), candidate_12 (rank 10)
+
+Analysis
+--------
+The Top-3 recommendations retrieved 6 of 8 relevant pairs overall.
+Expanding from Top-3 to Top-5 added 0 additional relevant candidates.
+Similarity scores range from 0.0000 to 0.0660 with a mean of 0.0192.
+Jobs with only one relevant candidate have a maximum possible Precision@3 of 0.3333 and Precision@5 of 0.2000 even when that candidate is ranked first.
+Absolute similarity scores are low because TF-IDF rewards exact term overlap and the job and candidate documents share few terms.
+
+Limitations
+-----------
+- The answer key uses team-approved manual relevance judgements; the reported metrics depend on those labels.
+- The candidate pool is very small and has uneven numbers of relevant candidates across jobs.
+- Some relevance decisions use transferable skills because the sample contains few direct HR and Civil Engineering matches.
+- Precision@K is sensitive to having fewer than K relevant candidates in the available pool.
+- TF-IDF cannot recognize semantic matches that use different wording and does not separately weight skills experience and education.
